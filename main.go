@@ -32,7 +32,7 @@ func generateMatrix() [][]rune {
 	for i := 0; i < height; i++ {
 		row := make([]rune, width)
 		for j := 0; j < width; j++ {
-			if rand.Intn(10) > 1 { // Probability of a space: 20%
+			if rand.Intn(10) > 2 { // Probability of a space: 20%
 				row[j] = rune(' ')
 			} else {
 				row[j] = rune(rand.Intn(94) + 33) // Printable characters (33 - 126)
