@@ -7,8 +7,8 @@ import (
 )
 
 const (
-	width  = 150
-	height = 5
+	width  = 130
+	height = 2
 )
 
 func main() {
@@ -21,7 +21,7 @@ func main() {
 		matrix := generateMatrix()
 		printMatrix(matrix)
 		shiftMatrixDown(matrix)
-		time.Sleep(250 * time.Millisecond)
+		time.Sleep(200 * time.Millisecond)
 	}
 }
 
