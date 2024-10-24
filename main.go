@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	width  = 120
+	width  = 12
 	height = 10
 )
 
