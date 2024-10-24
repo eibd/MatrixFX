@@ -23,7 +23,7 @@ func main() {
 		matrix := generateMatrix()
 		printMatrix(matrix)
 		shiftMatrixDown(matrix) // New function to move characters down
-		time.Sleep(180 * time.Millisecond)
+		time.Sleep(250 * time.Millisecond)
 	}
 }
 
@@ -44,12 +44,16 @@ func generateMatrix() [][]rune {
 }
 
 func printMatrix(matrix [][]rune) {
+	// Define a cor verde (código ANSI 32) antes de imprimir a matriz
+	fmt.Print("\033[32m")
 	for i := 0; i < height; i++ {
 		for j := 0; j < width; j++ {
 			fmt.Print(string(matrix[i][j]))
 		}
-		fmt.Println() // Newline after each row
+		fmt.Println()
 	}
+	// Reseta a cor após imprimir a matriz
+	fmt.Print("\033[0m")
 }
 
 func shiftMatrixDown(matrix [][]rune) {
