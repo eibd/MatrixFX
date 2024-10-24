@@ -14,15 +14,13 @@ const (
 func main() {
 	rand.Seed(time.Now().UnixNano())
 
-	// Configuração para ocultar o cursor e limpar a tela (Cursor hiding and screen clearing)
 	fmt.Print("\033[?25l")
 	defer fmt.Print("\033[?25h")
 
-	// Gerar o efeito cascata (Generate the cascading effect)
 	for {
 		matrix := generateMatrix()
 		printMatrix(matrix)
-		shiftMatrixDown(matrix) // New function to move characters down
+		shiftMatrixDown(matrix)
 		time.Sleep(250 * time.Millisecond)
 	}
 }
@@ -32,10 +30,10 @@ func generateMatrix() [][]rune {
 	for i := 0; i < height; i++ {
 		row := make([]rune, width)
 		for j := 0; j < width; j++ {
-			if rand.Intn(10) > 2 { // Probability of a space: 20%
+			if rand.Intn(10) > 2 {
 				row[j] = rune(' ')
 			} else {
-				row[j] = rune(rand.Intn(2) + 48) // Printable characters (33 - 126)
+				row[j] = rune(rand.Intn(2) + 48)
 			}
 		}
 		matrix[i] = row
@@ -44,7 +42,6 @@ func generateMatrix() [][]rune {
 }
 
 func printMatrix(matrix [][]rune) {
-	// Define a cor verde (código ANSI 32) antes de imprimir a matriz
 	fmt.Print("\033[32m")
 	for i := 0; i < height; i++ {
 		for j := 0; j < width; j++ {
@@ -52,17 +49,14 @@ func printMatrix(matrix [][]rune) {
 		}
 		fmt.Println()
 	}
-	// Reseta a cor após imprimir a matriz
 	fmt.Print("\033[0m")
 }
 
 func shiftMatrixDown(matrix [][]rune) {
-	// Move characters down one row, handling the bottom row
 	for col := 0; col < width; col++ {
 		for row := height - 1; row > 0; row-- {
 			matrix[row][col] = matrix[row-1][col]
 		}
-		// Fill the top row with random characters again
 		matrix[0][col] = rune(rand.Intn(94) + 33)
 	}
 }
