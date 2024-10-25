@@ -39,3 +39,6 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 ---
 
 Enjoy creating those "Matrix" vibes in your terminal! 🚀
+
+![image](https://github.com/user-attachments/assets/ed78b220-10c1-4d41-8a16-aa780a23a1f3)
+
