@@ -18,9 +18,8 @@ var (
 
 func main() {
 	rand.Seed(time.Now().UnixNano())
-
-	fmt.Print("\033[?25l")
-	defer fmt.Print("\033[?25h")
+	hideCursor()
+	defer showCursor()
 
 	for {
 		matrix := generateMatrix()
@@ -30,13 +29,21 @@ func main() {
 	}
 }
 
+func hideCursor() {
+	fmt.Print("\033[?25l")
+}
+
+func showCursor() {
+	fmt.Print("\033[?25h")
+}
+
 func generateMatrix() [][]rune {
 	matrix := make([][]rune, height)
 	for i := 0; i < height; i++ {
 		row := make([]rune, width)
 		for j := 0; j < widthCalc; j++ {
 			if rand.Intn(10) > 2 {
-				row[j] = rune(' ')
+				row[j] = ' '
 			} else {
 				row[j] = rune(rand.Intn(2) + 48)
 			}
