@@ -40,9 +40,10 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 Enjoy creating those "Matrix" vibes in your terminal! 🚀
 
-![image](https://github.com/user-attachments/assets/ed78b220-10c1-4d41-8a16-aa780a23a1f3)
 
-![MatrixFx](https://github.com/user-attachments/assets/68bf259f-be88-416b-9002-563d34bc17dd)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/68bf259f-be88-416b-9002-563d34bc17dd" alt="MatrixFx">
+</p>
 
 
 
