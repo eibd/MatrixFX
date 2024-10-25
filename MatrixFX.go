@@ -3,13 +3,17 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"os"
 	"time"
 )
 
 const (
-	width  = 130
+	//width  = 130
 	height = 2
 )
+
+var width = os.Getpagesize()
+var widthCalc = width / 20
 
 func main() {
 	rand.Seed(time.Now().UnixNano())
@@ -29,7 +33,7 @@ func generateMatrix() [][]rune {
 	matrix := make([][]rune, height)
 	for i := 0; i < height; i++ {
 		row := make([]rune, width)
-		for j := 0; j < width; j++ {
+		for j := 0; j < widthCalc; j++ {
 			if rand.Intn(10) > 2 {
 				row[j] = rune(' ')
 			} else {
