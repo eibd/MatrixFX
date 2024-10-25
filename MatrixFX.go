@@ -12,8 +12,8 @@ const (
 )
 
 var (
-	width     = os.Getpagesize()
-	widthCalc = width / 20
+	width       = os.Getpagesize()
+	coefficient = width / 20
 )
 
 func main() {
@@ -41,7 +41,7 @@ func generateMatrix() [][]rune {
 	matrix := make([][]rune, height)
 	for i := 0; i < height; i++ {
 		row := make([]rune, width)
-		for j := 0; j < widthCalc; j++ {
+		for j := 0; j < coefficient; j++ {
 			if rand.Intn(10) > 2 {
 				row[j] = ' '
 			} else {
