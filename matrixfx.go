@@ -17,7 +17,6 @@ var (
 )
 
 func main() {
-	rand.Seed(time.Now().UnixNano())
 	hideCursor()
 	defer showCursor()
 
@@ -25,7 +24,7 @@ func main() {
 		matrix := generateMatrix()
 		printMatrix(matrix)
 		shiftMatrixDown(matrix)
-		time.Sleep(200 * time.Millisecond)
+		time.Sleep(150 * time.Millisecond)
 	}
 }
 
