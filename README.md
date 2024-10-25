@@ -10,7 +10,7 @@ This Go project creates a cascading effect in the terminal, inspired by the icon
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/matrixfx.git
+    git clone https://github.com/eibd/matrixfx.git
     ```
 
 2. Navigate to the project directory:
