@@ -8,12 +8,13 @@ import (
 )
 
 const (
-	//width  = 130
 	height = 2
 )
 
-var width = os.Getpagesize()
-var widthCalc = width / 20
+var (
+	width     = os.Getpagesize()
+	widthCalc = width / 20
+)
 
 func main() {
 	rand.Seed(time.Now().UnixNano())
