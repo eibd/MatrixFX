@@ -42,3 +42,6 @@ Enjoy creating those "Matrix" vibes in your terminal! 🚀
 
 ![image](https://github.com/user-attachments/assets/ed78b220-10c1-4d41-8a16-aa780a23a1f3)
 
+![2024-10-25 15-03-25-2](https://github.com/user-attachments/assets/2387580f-8631-4257-a1cd-2b139b91fa47)
+
+
