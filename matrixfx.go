@@ -72,7 +72,10 @@ func printMatrix(matrix [][]rune) {
 	fmt.Print("\033[32m")
 	for i := 0; i < height; i++ {
 		for j := 0; j < width; j++ {
-			fmt.Print(string(matrix[i][j]))
+			if rand.Intn(10) > 7 {
+				fmt.Printf("\033[1;32m%s\033[0;32m", string(matrix[i][j]))
+				fmt.Print(string(matrix[i][j]))
+			}
 		}
 		fmt.Println()
 	}
