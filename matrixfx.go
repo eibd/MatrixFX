@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	height = 2
+	height = 1
 )
 
 var (
@@ -28,7 +28,7 @@ func main() {
 		matrix := generateMatrix()
 		printMatrix(matrix)
 		shiftMatrixDown(matrix)
-		time.Sleep(200 * time.Millisecond)
+		time.Sleep(150 * time.Millisecond)
 	}
 }
 
